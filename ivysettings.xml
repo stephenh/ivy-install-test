@@ -1,0 +1,22 @@
+<ivysettings>
+
+  <property name="ivy.cache.dir" value="${ivy.settings.dir}/cache" overwrite="true"/>
+
+  <resolvers>
+    <ibiblio name="maven" m2compatible="true" namespace="m2"/>
+    <filesystem name="local">
+      <ivy pattern="${ivy.settings.dir}/repo/[organisation]/[module]/ivy-[revision].xml" />
+      <artifact pattern="${ivy.settings.dir}/repo/[organisation]/[module]/[type]s/[artifact]-[revision].[ext]" />
+    </filesystem>
+  </resolvers>
+
+  <namespaces>
+    <namespace name="m2">
+      <rule>
+        <tosystem><src org="commons-lang"/><dest org="apache"/></tosystem>
+        <fromsystem><src org="apache" module="commons-lang"/><dest org="commons-lang"/></fromsystem>
+      </rule>
+    </namespace>
+  </namespaces>
+
+</ivysettings>
