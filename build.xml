@@ -9,11 +9,10 @@
     classpathref="ivy.lib.path"/>
 
   <target name="install">
-    <ivy:install
-      organisation="commons-lang"
-      module="commons-lang"
-      revision="2.3"
-      from="maven"
-      to="local"/>
+    <delete dir="cache"/>
+    <delete dir="repo"/>
+    <ivy:install organisation="apache" module="commons-lang" revision="2.4" from="maven" to="local"/>
+    <ivy:install organisation="apache" module="commons-collections" revision="3.2.1" from="maven" to="local"/>
+    <ivy:install organisation="apache" module="velocity" revision="1.7-beta1" from="maven" to="local" transitive="true" overwrite="true"/>
   </target>
 </project>

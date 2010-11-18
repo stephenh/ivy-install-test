@@ -12,9 +12,20 @@
 
   <namespaces>
     <namespace name="m2">
+      <!-- commons-lang -->
       <rule>
         <tosystem><src org="commons-lang"/><dest org="apache"/></tosystem>
         <fromsystem><src org="apache" module="commons-lang"/><dest org="commons-lang"/></fromsystem>
+      </rule>
+      <!-- commons-collections -->
+      <rule>
+        <tosystem><src org="commons-collections"/><dest org="apache"/></tosystem>
+        <fromsystem><src org="apache" module="commons-collections"/><dest org="commons-collections"/></fromsystem>
+      </rule>
+      <!-- velocity -->
+      <rule>
+        <tosystem><src org="org.apache.velocity"/><dest org="apache"/></tosystem>
+        <fromsystem><src org="apache" module="velocity"/><dest org="org.apache.velocity"/></fromsystem>
       </rule>
     </namespace>
   </namespaces>
